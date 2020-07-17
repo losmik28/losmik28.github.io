@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    background-image: url('./images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 90px 0px 50px 0px;
+    color: #fff;
+    text-decoration: underline;
+    letter-spacing: 5px;
+}
+
+h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.p1 {
+    width: 70%;
+    margin: 40px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+table {
+    width: 50%;
+    margin: -40px auto;
+}
+
+tr.spacer td {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+table img {
+    height: 250px;
+    width: 170px;
+    border-radius: 5px;
+}
+
+table tr td a{
+    display: block;
+}
+
+.center td:hover {
+    background: rgb(26, 11, 90);
+}
+
+.center td {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+.center a {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.twoParts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.twoParts img {
+    border-radius: 5px;
+}
+
+.part2 {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.porsche {
+    padding: 20px 18px;
+}
+
+.paragraphs {
+    padding-left: 5px;
+}
+
+.p2 {
+    font-weight: bold;
+    margin-bottom: -15px;
+    width: 100%;
+}
+
+.twoParts img {
+    height: 130px;
+    width: 90px;
+}

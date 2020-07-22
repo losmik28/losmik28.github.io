@@ -6,104 +6,111 @@
 
 form {
     background-color: lightgray;
-    width: 70%;
-    height: 450px;
-    padding: 20px;
-    margin: 0 auto;
-}
-
-label {
-    display: inline-block;
-    width: 280px;
-}
-
-.pretrazi {
-    position: relative;
-}
-
-.pretrazi input {
-    width: 35%;
-    padding-left: 40px;
-}
-
-.pretrazi img {
-    position: absolute;
-    left: 295px;
-    top: 9px;
-    width: 20px;
-}
-
-input, select, textarea {
-    width: 70%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid gray;
-    border-radius: 5px;
-}
-
-.textarea {
-    display: flex;
-    justify-content: space-between;
-}
-
-textarea {
-    margin-right: 6px;
-}
-
-.btn {
-    overflow: hidden;
-    margin-top: -5px;
-    margin-right: 5px;
-}
-
-.btn button {
-    padding: 13px 18px;
-    background-color: green;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    float: right;
 }
 
 @media only screen and (max-width: 600px){
-    form {
-        width: 100%;
-        height: 100%;
-    }
-
-    label {
-        margin-bottom: 10px;
-    }
-
-    input, select, textarea {
+    [class*="col-"]{
         width: 100%;
     }
-
-    .pretrazi {
-        position: relative;
+    
+    .col-m-3 {
+        width: 25%;
     }
-
-    .pretrazi img {
-        position: absolute;
-        left: 10px;
-        top: 37px;
-    }
-
-    .pretrazi input {
-        display: block;
+    
+    .col-m-6 {
         width: 50%;
     }
 
-    .textarea {
-        display: block;
+    .col-m-12 {
+        width: 100%;
     }
 
-    textarea {
-        margin-top: 10px;
+    form {
+        padding: 20px;
+    }
+
+    input, select, textarea {
+        display: block;
+        padding: 10px;
+        margin: 10px 0px;
+        border: 2px solid darkgray;
+        border-radius: 5px;
+    }
+
+    .pretrazite {
+        margin: 10px 0px;
+    }
+
+    .searchImg input {
+        padding-left: 30px;
+    }
+
+    button {
+        padding: 15px;
+        background-color: green;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 950px){
+    [class*="col-"]{
+        width: 100%;
+        float: left;
+    }
+    
+    .col-2 {
+        width: 16.66%;
+    }
+    
+    .col-3 {
+        width: 25%;
+    }
+    
+    .col-4 {
+        width: 33.33%;
+    }
+    
+    .col-6 {
+        width: 50%;
+    }
+    
+    .col-9 {
+        width: 75%;
+    }
+    
+    .col-12 {
+        width: 100%;
+    }
+
+    form {
+        padding: 40px 0px 20px 40px;
+    }
+
+    input, select, textarea{
+        padding: 15px;
+        border: 2px solid darkgray;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .opis label{
+        vertical-align: bottom;
     }
 
     .btn button {
-        width: 100%;
+        float: right !important;
+        padding: 15px;
+        background-color: green;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-right: 115px;
+        max-width: 100px;
     }
 }

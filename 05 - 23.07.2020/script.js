@@ -5,8 +5,7 @@ let f = 90;
 
 let c = (f - 32) * 5 / 9;
 // console.log(c);
-let kelvin = c + currentK;
-let k = kelvin;
+let k = c + currentK;
 // console.log(k);
 
 // Konverzija f u kelvin

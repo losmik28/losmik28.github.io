@@ -1,9 +1,9 @@
 // ZADATAK 1
 
-let lek1pSati = 12;
+let lek1pSati = 14;
 let lek1pMin = 00;
 let lek1kSati = 19;
-let lek1kMin = 30;
+let lek1kMin = 22;
 
 let ukPocetakLek1 = lek1pSati * 60 + lek1pMin;
 let ukKrajLek1 = lek1kSati * 60 + lek1kMin; 
@@ -11,10 +11,10 @@ let ukKrajLek1 = lek1kSati * 60 + lek1kMin;
 // console.log(ukKrajLek1);
 
 
-let lek2pSati = 11;
-let lek2pMin = 20;
-let lek2kSati = 20;
-let lek2kMin = 00;
+let lek2pSati = 14;
+let lek2pMin = 21;
+let lek2kSati = 19;
+let lek2kMin = 21;
 
 let ukPocetakLek2 = lek2pSati * 60 + lek2pMin; 
 let ukKrajLek2 = lek2kSati * 60 + lek2kMin; 
@@ -59,27 +59,28 @@ console.log(`Doktor 1 i Doktor 2 rade zajedno u smeni ${preklapanje} minuta, odn
 let para2 = document.getElementById('para2');
 
 let rastojanjeIzmedju = 3;
-let povrsinaLokala = 120;
-let trenutnoOsoba = 36;
+let povrsinaLokala = 8;
+let trenutnoOsoba = 4;
 
-let dozvoljenoOsoba = povrsinaLokala / rastojanjeIzmedju; // Na osnovu povrsine lokala i rastojanja izmedju osobe
+let dozvoljenoOsoba = Math.round(povrsinaLokala / rastojanjeIzmedju);
 let potrebnoNapustiti = trenutnoOsoba - dozvoljenoOsoba;
 // console.log(dozvoljenoOsoba);
 
-if(trenutnoOsoba <= 40){
+if(trenutnoOsoba <= dozvoljenoOsoba){
     console.log(`Da, pridrzavaju se propisanih mera.`);
-    para2.innerHTML = `Da, pridrzavaju se propisanih mera. Trenutno se nalaze ${trenutnoOsoba} osobe.`;
+    para2.innerHTML = `Da, pridrzavaju se propisanih mera.`;
     para2.style.color = "blue";
     para2.style.fontSize = "40px";
 } else {
-    console.log(`Ne, trenutno se u lokalu nalaze ${trenutnoOsoba} osobe, dozvoljeno je maksimalno ${dozvoljenoOsoba}, potrebno je da 
-    napuste ${potrebnoNapustiti} osobe.`);
-    para2.innerHTML = `Ne, trenutno se u lokalu nalaze ${trenutnoOsoba} osobe, dozvoljeno je maksimalno ${dozvoljenoOsoba}, potrebno je da 
-    napuste ${potrebnoNapustiti} osobe.`;
+    if(dozvoljenoOsoba == 0){
+        dozvoljenoOsoba = Math.ceil(povrsinaLokala / rastojanjeIzmedju);
+        potrebnoNapustiti = trenutnoOsoba - dozvoljenoOsoba;
+    }
+    console.log(`Ne, trenutno se u lokalu nalaze ${trenutnoOsoba} osobe, dozvoljeno je oko ${dozvoljenoOsoba} osobe, potrebno je da napuste ${potrebnoNapustiti} osobe.`);
+    para2.innerHTML = `Ne, trenutno se u lokalu nalaze ${trenutnoOsoba} osobe, dozvoljeno je oko ${dozvoljenoOsoba} osobe, potrebno je da napuste ${potrebnoNapustiti} osobe.`;
     para2.style.color = "blue";
     para2.style.fontSize = "40px";
 }
-
 
 
 // ZADATAK 3

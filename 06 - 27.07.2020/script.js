@@ -1,8 +1,8 @@
 // ZADATAK 1
 
-let lek1pSati = 10;
+let lek1pSati = 18;
 let lek1pMin = 00;
-let lek1kSati = 18;
+let lek1kSati = 20;
 let lek1kMin = 00;
 
 let ukPocetakLek1 = lek1pSati * 60 + lek1pMin;
@@ -10,9 +10,9 @@ let ukKrajLek1 = lek1kSati * 60 + lek1kMin;
 // console.log(ukPocetakLek1);
 // console.log(ukKrajLek1);
 
-let lek2pSati = 13;
+let lek2pSati = 16;
 let lek2pMin = 00;
-let lek2kSati = 18;
+let lek2kSati = 17;
 let lek2kMin = 00;
 
 let ukPocetakLek2 = lek2pSati * 60 + lek2pMin; 
@@ -25,13 +25,13 @@ let para4 = document.getElementById('para4');
 
 if(ukPocetakLek1 > ukPocetakLek2){
     console.log(`Doktor 2 je prvi krenuo na posao u ${lek2pSati}h`);
-    para4.innerHTML = `Doktor 2 je prvi krenuo na posao u ${lek2pSati}h i ${lek2pMin}m, ali je kasnije napustio smenu u odnosu na Doktora 1.`;
+    para4.innerHTML = `Doktor 2 je prvi krenuo na posao u ${lek2pSati}h i ${lek2pMin}m.`;
     para4.style.color = "red";
     para4.style.fontSize = "40px";
     // Proveravamo ko je prvi zavrsio sa smenom
     if(ukKrajLek1 > ukKrajLek2){
         console.log(`Doktor 2 je i prvi zavrsio sa poslom u ${lek2kSati}h`);
-        para4.innerHTML = `Doktor 2 je prvi krenuo na posao i prvi zavrsio sa poslom u ${lek2kSati}h.`;
+        para4.innerHTML = `Doktor 2 je prvi krenuo na posao i prvi zavrsio sa poslom u ${lek2kSati}h i ${lek2kMin}m.`;
         para4.style.color = "red";
         para4.style.fontSize = "40px";
     }
@@ -90,39 +90,6 @@ if(preklapanje == 0){
     para1.style.fontSize = "40px";
     console.log(`Doktor 1 i Doktor 2 rade zajedno u smeni ${preklapanje} minuta, odnosno ${hSati} sati/sata i ${mMinuti} minuta.`);
 }
-
-// SAMO PREKLAPANJE
-
-// if(ukPocetakLek1 > ukPocetakLek2){
-//     if(ukKrajLek1 <= ukKrajLek2){
-//         preklapanje = ukKrajLek1 - ukPocetakLek1;
-//         // console.log(`Doktor 1 i Doktor 2 zajedno u smeni rade ${preklapanje} minuta.`);
-//     } else {
-//         preklapanje = ukKrajLek2 - ukPocetakLek1;
-//         // console.log(`Doktor 1 i Doktor 2 zajedno u smeni rade ${preklapanje} minuta.`);
-//     }
-// } else {
-//     if(ukKrajLek2 <= ukKrajLek1){
-//         preklapanje = ukKrajLek2 - ukPocetakLek2;
-//         // console.log(`Doktor 1 i Doktor 2 zajedno u smeni rade ${preklapanje} minuta.`);
-//     } else {
-//         preklapanje = ukKrajLek1 - ukPocetakLek2;
-//         // console.log(`Doktor 1 i Doktor 2 zajedno u smeni rade ${preklapanje} minuta.`);
-//     }
-// }
-
-// let sati = preklapanje / 60;
-// let hSati = Math.floor(sati);
-// let minuti = (sati - hSati) * 60;
-// let mMinuti = Math.round(minuti);
-
-// para1.innerHTML = `Doktor 1 i Doktor 2 rade zajedno u smeni ${preklapanje} minuta, odnosno ${hSati} sati/sata i ${mMinuti} minuta.`;
-// para1.style.color = "red";
-// para1.style.fontSize = "40px";
-// para1.style.display = "block";
-// console.log(`Doktor 1 i Doktor 2 rade zajedno u smeni ${preklapanje} minuta, odnosno ${hSati} sati/sata i ${mMinuti} minuta.`);
-
-
 
 // ZADATAK 2
 

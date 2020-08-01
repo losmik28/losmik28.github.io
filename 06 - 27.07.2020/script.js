@@ -1,8 +1,8 @@
 // ZADATAK 1
 
-let lek1pSati = 18;
+let lek1pSati = 16;
 let lek1pMin = 00;
-let lek1kSati = 20;
+let lek1kSati = 18;
 let lek1kMin = 00;
 
 let ukPocetakLek1 = lek1pSati * 60 + lek1pMin;
@@ -10,9 +10,9 @@ let ukKrajLek1 = lek1kSati * 60 + lek1kMin;
 // console.log(ukPocetakLek1);
 // console.log(ukKrajLek1);
 
-let lek2pSati = 16;
+let lek2pSati = 10;
 let lek2pMin = 00;
-let lek2kSati = 17;
+let lek2kSati = 15;
 let lek2kMin = 00;
 
 let ukPocetakLek2 = lek2pSati * 60 + lek2pMin; 

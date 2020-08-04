@@ -2,11 +2,11 @@ console.log(`---> ZADATAK 1 <---`);
 
 // ZADATAK 1
 function suma(n, m){
-    let suma1 = 1;
+    let sumaKubova = 1;
     for(let i = n; i <= m; i++){
         suma1 = i ** 3;
     }
-    return suma1;
+    return sumaKubova;
 }
 
 let rezultat = suma(2, 4);

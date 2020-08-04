@@ -21,18 +21,24 @@ console.log(`Ceo deo iznosi ${celi} a ostatak je ${veci}`);
 
 
 // ZADATAK 2
-n = 5;
+n = 10;
 i = 1;
+// Intervali
 a = -1;
 b = 1;
-if(a <= -1 && b <= 1){
-    while(i <= n){
-        console.log(Math.sin(n + i / n));
-        i++;
+// ..........
+let suma = 0;
+let ukupnaSuma = 0;
+while(i <= n){
+    suma = Math.sin(n + i / n); // dobijena suma za sinus
+    if(a <= suma && suma <= b){
+        ukupnaSuma += suma;
+        console.log(suma);
     }
-} else {
-    console.log(`Uneli ste pogresne vrednosti za a i b.`);
+    i++;
 }
+console.log(ukupnaSuma);
+
 
 
 // ZADATAK 3

@@ -39,8 +39,10 @@ function deljiv(n, m, k){
         if(i % k == 0){
             console.log(`Broj ${i} je deljiv sa brojem ${k}.`);
             brojac++;
+            // console.log(brojac)
         }
     }
+    console.log(`Ukupno ima ${brojac} deljivih.`)
 }
 
-deljiv(90, 100, 3);
+deljiv(20, 100, 3);

@@ -4,12 +4,12 @@ console.log(`---> ZADATAK 1 <---`);
 function suma(n, m){
     let sumaKubova = 1;
     for(let i = n; i <= m; i++){
-        suma1 = i ** 3;
+        sumaKubova = i ** 3;
     }
     return sumaKubova;
 }
 
-let rezultat = suma(2, 4);
+let rezultat = suma(1, 3);
 console.log(`Rezultat je: ${rezultat}.`);
 
 console.log(`---> ZADATAK 2 <---`);

@@ -26,29 +26,30 @@ let book4 = {
     urlSlike: "./images/petarpan.jpg"
 }
 
-let book5 = {
-    naziv: "Petar Pan",
-    autor: "Barrie",
-    cena: 300,
-    urlSlike: "./images/petarpan.jpg"
-}
+// let book5 = {
+//     naziv: "Petar Pan",
+//     autor: "Barrie",
+//     cena: 300,
+//     urlSlike: "./images/petarpan.jpg"
+// }
 
-let book6 = {
-    naziv: "Petar Pan",
-    autor: "Barrie",
-    cena: 500,
-    urlSlike: "./images/petarpan.jpg"
-}
+// let book6 = {
+//     naziv: "Petar Pan",
+//     autor: "Barrie",
+//     cena: 500,
+//     urlSlike: "./images/petarpan.jpg"
+// }
 
-let arrbooks= [book1, book2, book3, book4, book5, book6];
+let arrbooks= [book1, book2, book3, book4];
 
 
 let prosek = 0;
 let suma = 0; 
 let brMax = 0;
 let brMin = 0;
-let max = 0;
-let min = 9999999999;
+let max = arrbooks[0].cena;
+let min = arrbooks[0].cena;
+
 for(let i = 0; i < arrbooks.length; i++){
     suma += arrbooks[i].cena;
 }

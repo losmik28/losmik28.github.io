@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <header>
+        <p>Enter username, then press "Enter", choose the difficulty of the game and Enjoy!!!</p>
+    </header>
+    <div id="all">
+        <div class="formGame col-7">
+            <form class="col-m-12 col-t-12 col-12">
+                <h1 class="col-m-12 col-t-12 col-6">Memory Game</h1>
+                <div class="col-m-12 col-t-12 col-12">
+                    <input class="col-m-6 col-t-6 col-5" type="text" id="username" placeholder="Enter username">
+                    <input class="col-m-2 col-t-3 col-2" type="text" name="timer" id="timer" value="0" disabled>
+                </div>
+                <div class="tezinaIgre col-m-12 col-t-12">
+                    <h2>Select level</h2>
+                    <input type="radio" name="tezina" id="lako" value="Easy"><label for="">Easy</label>
+                    <input type="radio" name="tezina" id="srednje" value="Medium"><label for="">Medium</label>
+                    <input type="radio" name="tezina" id="tesko" value="Hard"><label for="">Hard</label>
+                    <input type="radio" name="tezina" id="ekspert" value="Expert"><label for="">Expert</label>
+                    <br>
+                </div>
+            </form>
+            <div id="game"></div>
+        </div>
+    
+        <section class="col-m-12 col-t-12 col-5">
+            <h2>Score Table: <span id="spanTable">Easy</span></h1>
+            <ul>
+                <li id="easyTable"><a>Easy</a></li>
+                <li id="mediumTable"><a>Medium</a></li>
+                <li id="hardTable"><a>Hard</a></li>
+                <li id="veryHardTable"><a>Expert</a></li>
+            </ul>
+            <div id="tableBestScores"></div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

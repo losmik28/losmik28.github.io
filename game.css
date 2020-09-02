@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #6589F9;
+}
+
+header {
+    border: 2px solid black;
+    padding: 0px;
+    margin: -8px;
+    background: #FAB942;
+}
+
+header p {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#all {
+    display: flex;
+    height: 90vh;
+}
+
+.formGame {
+    display: block;
+}
+
+#username {
+    padding: 10px;
+    box-shadow: 2px 2px 2px black;
+    background-color: #FAB942;
+    margin-bottom: 15px;
+    margin-right: 120px;
+}
+
+#timer {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #FAB942;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+.tezinaIgre {
+    display: block;
+    flex-wrap: wrap;
+}
+
+input[type="text"]{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tezinaIgre label {
+    font-size: 18px;
+    margin-right: 15px;
+
+}
+
+.tezinaIgre h2, h1 {
+    margin-bottom: 0px;
+}
+
+input[type="radio"]{
+    border: 5px solid black;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    border: 3px solid black;
+    padding: 0px;
+    background: #FAB942;
+    margin: 20px 0px;
+}
+
+ul li {
+    padding: 10px;
+    width: 25%;
+    text-align: center;
+}
+
+ul li:hover {
+    display: block;
+    background: #6589F9;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #FAB942;
+}
+
+tr, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+}
+
+.tableResults:hover {
+    background: #6589F9;
+}
+
+#place, #username, #time {
+    font-weight: bold;
+}
+
+.grid4x4, .grid6x6, .grid8x8, .grid10x10 {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    float: left;
+}
+
+.grid4x4 {
+    max-width: 400px;
+}
+
+.grid4x4 .card, .grid4x4 .front, .grid4x4 .back {
+    width: 80px;
+    height: 80px;
+}
+
+.grid6x6 {
+    max-width: 400px;
+}
+
+.grid6x6 .card, .grid6x6 .front, .grid6x6 .back {
+    width: 55px;
+    height: 55px;
+}
+
+.grid8x8 {
+    max-width: 520px;
+}
+
+.grid10x10 {
+    max-width: 450px;
+}
+
+.card {
+    position: relative;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+}
+
+.card, .back, .front {
+    height: 50px;
+    width: 50px;
+}
+
+.back, .front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background: #FAB942;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #6589F9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.selected {
+    transform: rotateY(180deg);
+}
+
+.match .front {
+    background: #6589F9;
+}
+
+@media only screen and (max-width: 650px){
+    [class*="col-"]{
+        float: left;
+        width: 100%;
+        /* padding: 15px; */
+    }
+
+    #all {
+        display: block;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 40px 0px;
+    }
+
+    #game {
+        margin-top: 20px;
+    }
+    
+    .grid6x6 .card, .grid6x6 .front, .grid6x6 .back {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .grid8x8 {
+        max-width: 440px;
+    }
+
+    .grid8x8 .card, .grid8x8 .front, .grid8x8 .back {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .grid10x10 {
+        max-width: 500px;
+    }
+
+    .grid10x10 .card, .grid10x10 .front, .grid10x10 .back {
+        width: 35px;
+        height: 35px;
+    }
+
+    ul li {
+        padding: 7px 21px;
+        width: 25%;
+        text-align: center;
+    }
+
+    .col-m-1 {
+        width: 8.33%;
+    }
+    
+    .col-m-2 {
+        width: 16.66%;
+    }
+    
+    .col-m-3 {
+        width: 25%;
+    }
+    
+    .col-m-4 {
+        width: 33.33%;
+    }
+    
+    .col-m-5 {
+        width: 41.66%;
+    }
+    
+    .col-m-6 {
+        width: 50%;
+    }
+    
+    .col-m-7 {
+        width: 58.33%;
+    }
+    
+    .col-m-8 {
+        width: 66.66%;
+    }
+    
+    .col-m-9 {
+        width: 75%;
+    }
+    
+    .col-m-10 {
+        width: 83.33%;
+    }
+    
+    .col-m-11 {
+        width: 91.66%;
+    }
+    
+    .col-m-12 {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 650px){
+    [class*="col-"]{
+        float: left;
+        padding: 15px;
+    }
+
+    #all {
+        display: block;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 40px 0px;
+    }
+
+    table {
+        margin-bottom: 40px;
+    }
+    
+    .grid6x6 .card, .grid6x6 .front, .grid6x6 .back {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .grid8x8 {
+        max-width: 440px;
+    }
+
+    .grid8x8 .card, .grid8x8 .front, .grid8x8 .back {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .grid10x10 {
+        max-width: 460px;
+    }
+
+    .grid10x10 .card, .grid10x10 .front, .grid10x10 .back {
+        width: 35px;
+        height: 35px;
+    }
+
+    ul li {
+        padding: 7px 21px;
+        width: 25%;
+        text-align: center;
+    }
+
+    .col-t-1 {
+        width: 8.33%;
+    }
+    
+    .col-t-2 {
+        width: 16.66%;
+    }
+    
+    .col-t-3 {
+        width: 25%;
+    }
+    
+    .col-t-4 {
+        width: 33.33%;
+    }
+    
+    .col-t-5 {
+        width: 41.66%;
+    }
+    
+    .col-t-6 {
+        width: 50%;
+    }
+    
+    .col-t-7 {
+        width: 58.33%;
+    }
+    
+    .col-t-8 {
+        width: 66.66%;
+    }
+    
+    .col-t-9 {
+        width: 75%;
+    }
+    
+    .col-t-10 {
+        width: 83.33%;
+    }
+    
+    .col-t-11 {
+        width: 91.66%;
+    }
+    
+    .col-t-12 {
+        width: 100%;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 950px){
+    [class*="col-"]{
+        float: left;
+        padding: 15px;
+    }
+
+    h1 {
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #game {
+        margin-top: -30px;
+    }
+
+    .grid10x10 .card, .grid10x10 .front, .grid10x10 .back {
+        width: 35px;
+        height: 35px;
+    }
+
+    section h2 {
+        padding-top: 45px;
+    }
+    
+    .col-1 {
+        width: 8.33%;
+    }
+    
+    .col-2 {
+        width: 16.66%;
+    }
+    
+    .col-3 {
+        width: 25%;
+    }
+    
+    .col-4 {
+        width: 33.33%;
+    }
+    
+    .col-5 {
+        width: 41.66%;
+    }
+    
+    .col-6 {
+        width: 50%;
+    }
+    
+    .col-7 {
+        width: 58.33%;
+    }
+    
+    .col-8 {
+        width: 66.66%;
+    }
+    
+    .col-9 {
+        width: 75%;
+    }
+    
+    .col-10 {
+        width: 83.33%;
+    }
+    
+    .col-11 {
+        width: 91.66%;
+    }
+    
+    .col-12 {
+        width: 100%;
+    }
+}
